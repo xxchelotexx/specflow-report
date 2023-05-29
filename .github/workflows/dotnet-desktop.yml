@@ -22,3 +22,13 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Test
         run: dotnet test --no-restore --verbosity normal
+      - name: "Publish test results"
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        if: ${{ always() }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: './TestProject3/TestProject3/bin/Debug/net6.0/allure-results'
+          keep_files: true
+          user_name: elmer-zapata
+          user_email: elmero_7@hotmail.com
+          publish_branch: gh_page  
