@@ -37,5 +37,6 @@ jobs:
         if: always()
         continue-on-error: true
         with:
+          allure_results: ./TestProject3/bin/Debug/net6.0/allure-results
           ref: gh-pages
           path: gh-pages    
