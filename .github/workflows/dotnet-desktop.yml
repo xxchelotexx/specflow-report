@@ -31,4 +31,11 @@ jobs:
           keep_files: true
           user_name: elmer-zapata
           user_email: elmero_7@hotmail.com
-          publish_branch: gh_page  
+          publish_branch: gh_page
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages    
