@@ -31,21 +31,14 @@ jobs:
           keep_files: true
           user_name: elmer-zapata
           user_email: elmero_7@hotmail.com
-          publish_branch: gh_page
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-page
-          path: gh-page    
+          publish_branch: gh_page  
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
-          allure_results: ./
-          gh_pages: gh-page
+          allure_results: './TestProject3/bin/Debug/net6.0/allure-results'
+          gh_pages: gh-pages
           allure_report: allure-report
       - name: Deploy report to Github Pages
         if: always()
