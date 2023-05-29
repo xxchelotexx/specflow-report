@@ -37,15 +37,15 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-          ref: gh-pages
-          path: gh-pages    
+          ref: gh-page
+          path: gh-page    
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
-          allure_results: ./TestProject3/bin/Debug/net6.0/allure-results
-          gh_pages: gh-pages
+          allure_results: ./
+          gh_pages: gh-page
           allure_report: allure-report
       - name: Deploy report to Github Pages
         if: always()
