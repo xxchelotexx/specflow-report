@@ -1,0 +1,1 @@
+{"Get by id":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"261c6393473def35","reportUrl":"https://xxchelotexx.github.io/specflow-report/3//#testresult/261c6393473def35","status":"failed","statusDetails":"  Expected: OK\n  But was:  0\n","time":{"start":1685877831753,"stop":1685877832189,"duration":436}}]}}
