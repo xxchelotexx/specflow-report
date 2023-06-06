@@ -30,6 +30,7 @@ namespace TestProject3
         public void ThenIExpectedAValidCodeResponse()
         {
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+
         }
     }
 }
